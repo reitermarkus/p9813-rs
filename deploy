@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+set -o nounset
+
+ip="${1}"
+
+TARGET='armv7-unknown-linux-gnueabihf'
+
+cross build --release --example raspberry_pi --target "${TARGET}"
+
+rsync -avz --include raspberry_pi --exclude '*' "target/${TARGET}/release/examples/" pi@"${ip}:/tmp/p9813/"
+
+ssh pi@"${ip}" < setup_spi.sh
+
+ssh pi@"${ip}" sudo mv -f /tmp/p9813/raspberry_pi /usr/local/bin/p9813

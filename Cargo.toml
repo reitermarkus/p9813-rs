@@ -1,0 +1,22 @@
+[package]
+name = "p9813"
+version = "0.1.0"
+authors = ["Markus Reiter <me@reitermark.us>"]
+license = "MIT OR Apache-2.0"
+readme = "ReadMe.md"
+description = "A library for the P9813 RGB controller"
+documentation = "https://docs.rs/p9813"
+repository = "https://github.com/reitermarkus/p9813-rs"
+homepage = "https://github.com/reitermarkus/p9813-rs"
+keywords = ["embedded-hal", "spi"]
+categories = ["no-std", "embedded", "hardware-support"]
+edition = "2018"
+
+[dependencies]
+embedded-hal = "0.2"
+
+[dev-dependencies]
+rand = "0.7"
+
+[target.'cfg(not(target_os = "macos"))'.dev-dependencies]
+rppal = { version = "0.11", features = ["hal"] }
