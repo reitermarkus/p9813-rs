@@ -1,11 +1,13 @@
+#[cfg(target_os = "macos")]
+fn main() {}
+
 #![cfg(not(target_os = "macos"))]
-
-use rppal::spi::{Spi, Bus, SlaveSelect, Mode, Error};
-use rand::Rng;
-
-use p9813::P9813;
-
 fn main() -> Result<(), Error> {
+  use rppal::spi::{Spi, Bus, SlaveSelect, Mode, Error};
+  use rand::Rng;
+
+  use p9813::P9813;
+
   let spi = Spi::new(
     Bus::Spi0,
     SlaveSelect::Ss0,
