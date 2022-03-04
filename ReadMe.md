@@ -10,7 +10,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-p9813 = "0.1"
+p9813 = "0.2"
 ```
 
 and use it like this:
