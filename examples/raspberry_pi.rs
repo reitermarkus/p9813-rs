@@ -2,7 +2,7 @@
 fn main() {}
 
 #![cfg(not(target_os = "macos"))]
-fn main() -> Result<(), rppal::Error> {
+fn main() -> Result<(), rppal::spi::Error> {
   use rppal::spi::{Spi, Bus, SlaveSelect, Mode};
   use rand::Rng;
 
