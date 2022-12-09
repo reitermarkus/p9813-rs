@@ -19,4 +19,4 @@ embedded-hal = "0.2"
 rand = "0.8"
 
 [target.'cfg(not(target_os = "macos"))'.dev-dependencies]
-rppal = { version = "0.13", features = ["hal"] }
+rppal = { version = "0.14", features = ["hal"] }
