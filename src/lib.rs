@@ -18,9 +18,7 @@ pub struct P9813<S> {
 
 impl<S: fmt::Debug> fmt::Debug for P9813<S> {
   fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-    f.debug_struct("P913")
-      .field("spi", &self.spi)
-      .finish()
+    f.debug_struct("P913").field("spi", &self.spi).finish()
   }
 }
 
