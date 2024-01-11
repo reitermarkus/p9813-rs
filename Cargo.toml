@@ -13,10 +13,14 @@ keywords = ["embedded-hal", "spi"]
 categories = ["no-std", "embedded", "hardware-support"]
 
 [dependencies]
-embedded-hal = "0.2"
+embedded-hal = "1"
 
 [dev-dependencies]
 rand = "0.8"
+embedded-hal-mock = "0.10"
 
 [target.'cfg(not(target_os = "macos"))'.dev-dependencies]
-rppal = { version = "0.14", features = ["hal"] }
+rppal = { version = "0.16", features = ["hal"] }
+
+[patch.crates-io]
+rppal = { git = "https://github.com/reitermarkus/rppal", branch = "embedded-hal-1" }
