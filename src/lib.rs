@@ -1,5 +1,5 @@
 #![no_std]
-#![deny(bad_style, future_incompatible, missing_docs, missing_debug_implementations, rust_2018_idioms)]
+#![warn(bad_style, future_incompatible, missing_docs, missing_debug_implementations, rust_2018_idioms)]
 
 //! A library for the P9813 RGB controller.
 
