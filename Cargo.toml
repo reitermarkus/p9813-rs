@@ -20,7 +20,7 @@ rand = "0.8"
 embedded-hal-mock = "0.10"
 
 [target.'cfg(not(target_os = "macos"))'.dev-dependencies]
-rppal = { version = "0.16", features = ["hal"] }
+rppal = { version = "0.17", features = ["hal"] }
 
 [patch.crates-io]
 rppal = { git = "https://github.com/reitermarkus/rppal", branch = "embedded-hal-1" }
