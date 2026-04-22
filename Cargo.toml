@@ -16,7 +16,7 @@ categories = ["no-std", "embedded", "hardware-support"]
 embedded-hal = "1"
 
 [dev-dependencies]
-rand = "0.8"
+rand = "0.10"
 embedded-hal-mock = "0.10"
 
 [target.'cfg(not(target_os = "macos"))'.dev-dependencies]
